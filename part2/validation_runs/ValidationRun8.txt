@@ -1,0 +1,36 @@
+  ===== Simulator configuration =====
+  L1_BLOCKSIZE:                  64
+  L1_SIZE:                      1024
+  L1_ASSOC:                     8
+  Victim_Cache_SIZE:            256
+  L2_SIZE:                      0
+  L2_ASSOC:                     0
+  trace_file:                   ./trace/vortex_trace.txt
+  Replacement Policy:           LRU
+  ===================================
+
+===== L1 contents =====
+set  0: f60698  D	801b22  	f60696  D	f60699  D	8008b7  	801adf  	80040f  	80040a  D	
+set  1: f60697  D	800643  	801bf0  	8001c8  	f6066f  D	80040e  D	f60688  	800645  	
+===== Victim Cache contents =====
+set  0: 1003645  	1ec0d35  D	1000812  	1ec0d33  D	
+
+  ====== Simulation rets (raw) ======
+
+  a. number of L1 reads:           70871
+  b. number of L1 read misses:     8087
+  c. number of L1 writes:          29129
+  d. number of L1 write misses:    4488
+  e. L1 miss rate:                0.1258
+  f. number of swaps:     2401
+  g. number of victim cache writeback:     6140
+  h. number of L2 reads:           0
+  i. number of L2 read misses:     0
+  j. number of L2 writes:          0
+  k. number of L2 write misses:    0
+  l. L2 miss rate:                 0
+  m. number of L2 writeback:       0
+  n. total memory traffic:         18715
+
+  ==== Simulation results (performance) ====
+  1. average access time:         3.3214 ns

@@ -1,0 +1,47 @@
+  ===== Simulator configuration =====
+  L1_BLOCKSIZE:                  128
+  L1_SIZE:                      1024
+  L1_ASSOC:                     2
+  Victim_Cache_SIZE:            1024
+  L2_SIZE:                      4096
+  L2_ASSOC:                     4
+  trace_file:                   ./trace/vortex_trace.txt
+  Replacement Policy:           LFU
+  ===================================
+
+===== L1 contents =====
+set  0: 3d81a2  	3d81a6  D	
+set  1: 3d81a6  D	200191  	
+set  2: 200103  D	200102  D	
+set  3: 2006b7  	3d81a5  D	
+===== Victim Cache contents =====
+set  0: f6066f  D	800643  	8008b7  	80040f  	f60696  D	8001c8  	801b22  	801bf0  	
+===== L2 contents =====
+set  0: 100380  	10037e  	1ec0d1  	100039  	
+set  1: 1005e3  D	1ec0d3  D	100081  	100380  	
+set  2: 100364  	1ec0d3  D	1ec0d2  D	100081  D	
+set  3: 1005dc  	1ec0d2  D	1000c8  	100364  D	
+set  4: 100435  	1ec0d2  D	1000c8  D	1000f1  D	
+set  5: 10042f  D	1000c8  	1ec0d2  D	1000ef  D	
+set  6: 100080  	1ec0d2  D	1ec0d3  D	100116  D	
+set  7: 10035b  	1ec0d2  D	100081  D	100116  	
+
+  ====== Simulation results (raw) ======
+
+  a. number of L1 reads:           70871
+  b. number of L1 read misses:     6985
+  c. number of L1 writes:          29129
+  d. number of L1 write misses:    3501
+  e. L1 miss rate:                0.1049
+  f. number of swaps:     16737
+  g. number of victim cache writeback:     4885
+  h. number of L2 reads:           10486
+  i. number of L2 read misses:     3500
+  j. number of L2 writes:          4885
+  k. number of L2 write misses:    573
+  l. L2 miss rate:                0.2650
+  m. number of L2 writeback:     1328
+  n. total memory traffic:         5401
+
+  ==== Simulation results (performance) ====
+  1. average access time:         1.4674 ns

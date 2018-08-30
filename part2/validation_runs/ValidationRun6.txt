@@ -1,0 +1,65 @@
+  ===== Simulator configuration =====
+  L1_BLOCKSIZE:                  64
+  L1_SIZE:                      2048
+  L1_ASSOC:                     2
+  Victim_Cache_SIZE:            0
+  L2_SIZE:                      4096
+  L2_ASSOC:                     4
+  trace_file:                   ./trace/gcc_trace.txt
+  Replacement Policy:           LRU
+  ===================================
+
+===== L1 contents =====
+set  0: 1000c5  	100147  D	
+set  1: 1000c5  	1000d6  D	
+set  2: 10007d  	1000bd  D	
+set  3: 10007d  	1000d6  	
+set  4: 10007d  	1ec0ce  D	
+set  5: 10010a  	10007d  	
+set  6: 1000d5  	1000f9  	
+set  7: 100146  D	1000fc  D	
+set  8: 1000e0  D	100146  D	
+set  9: 100146  	100111  D	
+set  10: 1000c7  D	100004  	
+set  11: 10007c  	100004  	
+set  12: 1000bd  D	100004  	
+set  13: 1000d5  	100004  	
+set  14: 1000c7  D	1000d5  	
+set  15: 1000c6  D	100146  D	
+===== L2 contents =====
+set  0: 100147  	1000cc  D	1000c5  	1000bd  D	
+set  1: 1000cc  D	1000d6  	1000c5  	100147  D	
+set  2: 10007d  	1000bd  	1000c5  	100147  D	
+set  3: 10007d  	1000d9  D	1000c5  	1000d6  D	
+set  4: 100146  D	1000d5  	10007d  	1000d9  D	
+set  5: 1000d5  	10009d  	10007d  	10010a  D	
+set  6: 10009d  	1000d5  	1000f9  	1000c5  D	
+set  7: 100111  D	100146  D	1000fc  D	10009d  	
+set  8: 1000a9  D	100146  D	1000e0  	10009d  	
+set  9: 100120  	100111  D	100146  D	1000e0  	
+set  10: 1000c7  D	100146  D	10007c  	100004  	
+set  11: 10007c  	1000a4  	100004  	100146  D	
+set  12: 10007c  	1000bd  	100004  	1000a4  	
+set  13: 1000d5  D	10011f  	100004  	100146  D	
+set  14: 100146  D	1000c6  D	10011f  	1000c7  	
+set  15: 1000c6  	100146  	1000cb  D	1000d6  D	
+
+  ====== Simulation results (raw) ======
+
+  a. number of L1 reads:           63640
+  b. number of L1 read misses:     7439
+  c. number of L1 writes:          36360
+  d. number of L1 write misses:    4145
+  e. L1 miss rate:                0.1158
+  f. number of swaps:     0
+  g. number of victim cache writeback:     0
+  h. number of L2 reads:           11584
+  i. number of L2 read misses:     6230
+  j. number of L2 writes:          4970
+  k. number of L2 write misses:    142
+  l. L2 miss rate:                0.3849
+  m. number of L2 writeback:     2961
+  n. total memory traffic:         9333
+
+  ==== Simulation results (performance) ====
+  1. average access time:         1.7058 ns
